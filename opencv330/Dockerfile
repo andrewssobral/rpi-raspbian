@@ -64,7 +64,6 @@ RUN cd /tmp/opencv-$OPENCV_VERSION && \
   make clean
   
 # cleanup source
-RUN cd /tmp && rm -rf opencv-$OPENCV_VERSION
-
+RUN cd /tmp && rm -rf opencv-$OPENCV_VERSION && rm -rf opencv_contrib-$OPENCV_VERSION && rm -rf *.zip
 
 CMD ["/bin/bash"]
